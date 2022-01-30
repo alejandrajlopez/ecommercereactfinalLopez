@@ -1,0 +1,28 @@
+.itemDetail {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 20px;
+  background-color: rgb(253, 198, 177);
+  padding: 20px;
+}
+
+.itemDeailImg {
+  border: 1px solid red;
+  height: 500px;
+  width: 400px;
+}
+
+.itemDetailcontent {
+  width: 600px;
+}
+
+.itemDetailcontent span b {
+  font-family: Verdana;
+  border-bottom: 3px solid red;
+  border-radius: 5px;
+}
+
+.itemDetailcontent p {
+  font-family: Verdana;
+}

@@ -1,0 +1,25 @@
+.icon-cart {
+  display: flex;
+  text-align: end;
+  margin-right: 2rem;
+  align-items: center;
+  position: relative;
+  justify-content: flex-end;
+  color: black;
+}
+
+.number-cart {
+  position: absolute;
+  width: 2.2rem;
+  height: 2.2rem;
+  right: 2.5rem;
+  top: 1.3rem;
+  border-radius: 50%;
+  background: #f2c12e;
+  color: black;
+  box-sizing: border-box;
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

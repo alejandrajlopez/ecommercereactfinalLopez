@@ -1,0 +1,23 @@
+.greetingContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: space-around;
+  margin: 10px;
+}
+
+.greetingContainer h1 {
+  top: 100px;
+  text-align: center;
+  padding: 15px 0;
+}
+
+.itemListContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin: 10px;
+  align-content: space-around;
+}

@@ -1,0 +1,19 @@
+.card {
+  margin: 10px;
+  height: auto;
+  width: 300px;
+}
+.cardImage {
+  height: 300px;
+}
+.card .card-Content {
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
+  height: fit-content;
+}
+.card-Description {
+  margin: 10px;
+  font-weight: 200;
+  height: fit-content;
+}

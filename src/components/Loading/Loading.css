@@ -1,0 +1,17 @@
+.loading-spinner {
+  align-self: center;
+  background-color: whitesmoke;
+  width: 5vw;
+  height: 5vw;
+  margin-top: 25vh;
+  @media (max-width: 768px) {
+    margin-top: 35vh;
+    width: 20vw;
+    height: 20vw;
+  }
+}
+
+.spinner-border {
+  color: red;
+  font-size: 20px;
+}

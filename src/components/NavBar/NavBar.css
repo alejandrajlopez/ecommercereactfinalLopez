@@ -1,0 +1,13 @@
+.navBar {
+  padding: 30px 0;
+  max-height: 100px;
+  font-size: 20px;
+}
+
+.navDropdown {
+  font-size: 20px;
+}
+
+.navBarContainer .brand {
+  font-size: 40px;
+}
