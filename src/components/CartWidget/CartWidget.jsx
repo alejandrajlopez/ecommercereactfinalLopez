@@ -6,12 +6,15 @@ import { useCartContext } from "../CartContext/CartContext";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 
 const CartWidget = () => {
-  const { totalItems } = useCartContext();
+
+  const { cart } = useCartContext();
+
 
   return (
     <>
       <AiOutlineShoppingCart className="mt-3 text-light" />
-      <span className="text-light">{totalItems}</span>
+    
+      <span className="text-light">{cart.length}</span>
     </>
   );
 };

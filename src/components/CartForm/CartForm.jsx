@@ -5,9 +5,8 @@ import { collection, addDoc, Timestamp } from "firebase/firestore";
 import { useCartContext } from "../CartContext/CartContext";
 
 const CartForm = () => {
-  const { cart, totalPrice } = useCartContext();
-  const [numDeCompra, setNumDeCompra] = useState("");
-
+  const { cart, totalPrice, clear} = useCartContext();
+  
   const [form, setFormState] = useState({
     nombre: "",
     apellido: "",
@@ -29,15 +28,35 @@ const CartForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    
+    if (!form.nombre || !form.apellido || !form.email || !form.cel) {
+      alert("todos los campos son obligatorios , asegurate de llenar todos *")
+      return;    
+    }
+    
+    
     try {
       const docRef = await addDoc(collection(db, "compras"), form);
-      setNumDeCompra(docRef.id);
+     
 
+      setFormState({
+        ...form,
+        nombre: "",
+        apellido: "",
+        email: "",
+        cel: "",
+      })
+      alert(`
+      ¡¡Compra exitosa!!\n\n
+      'Su numero de orden es : \n'
+      ${docRef.id}
+      `)
+
+      clear()
       console.log("Numero de compra: ", docRef.id);
     } catch (error) {
       console.log(error);
     }
-    e.target.reset();
   };
 
   return (
@@ -93,16 +112,18 @@ const CartForm = () => {
 
         <Button variant="warning" type="submit" className="align-center">
           <b>Finalizar compra</b>
+          <div className="cart-items">
+                <div className="table-responsive container-cart-item pt-3">
+                  <table className="table ">
+                    </table>
+                    </div>
+                    </div>
+                    
         </Button>
       </Form>
-      {numDeCompra !== "" && (
-        <h3 className="h3">
-          ¡¡Compra exitosa!! ¡Gracias por elegirnos! Este es su código de
-          compra: {numDeCompra}
-        </h3>
-      )}
     </>
   );
 };
 
 export default CartForm;
+
